@@ -10,7 +10,7 @@ Extracted<-cbind(as.data.frame.Date(as.Date(Extract$Date,"%d/%m/%Y")),
                  as.POSIXlt(strptime(Extract$Time,"%H:%M:%S")),Extract[,3:9])
 
 png(file="Plot3.png")
-
+timeline<-1:2880
 plot(timeline,as.numeric(Extracted$Sub_metering_1),
      pch=".",
      xaxt='n',

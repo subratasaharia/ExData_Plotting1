@@ -8,7 +8,7 @@ Extract<-PrjData[(as.Date(PrjData$Date,"%d/%m/%Y")==as.Date("2007-02-01")|
                     as.Date(PrjData$Date,"%d/%m/%Y")==as.Date("2007-02-02")),]
 Extracted<-cbind(as.data.frame.Date(as.Date(Extract$Date,"%d/%m/%Y")),
                  as.POSIXlt(strptime(Extract$Time,"%H:%M:%S")),Extract[,3:9])
-
+timeline<-1:2880
 png(file="Plot4.png")
 par(mfrow=c(2,2))
 par(mar=c(4,4,1,1))
