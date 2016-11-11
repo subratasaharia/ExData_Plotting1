@@ -9,7 +9,7 @@ Extract<-PrjData[(as.Date(PrjData$Date,"%d/%m/%Y")==as.Date("2007-02-01")|
 Extracted<-cbind(as.data.frame.Date(as.Date(Extract$Date,"%d/%m/%Y")),
                  as.POSIXlt(strptime(Extract$Time,"%H:%M:%S")),Extract[,3:9])
 png(file="Plot1.png")
-hist(as.numeric(Extracted$Global_active_power)/1000,col = "Red", 
+hist(as.numeric(Extracted$Global_active_power),col = "Red", 
      xlab="Global Active Power(kilowatts)", 
      main="Global Active Power")
 
