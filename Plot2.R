@@ -8,7 +8,7 @@ Extract<-PrjData[(as.Date(PrjData$Date,"%d/%m/%Y")==as.Date("2007-02-01")|
                     as.Date(PrjData$Date,"%d/%m/%Y")==as.Date("2007-02-02")),]
 Extracted<-cbind(as.data.frame.Date(as.Date(Extract$Date,"%d/%m/%Y")),
                  as.POSIXlt(strptime(Extract$Time,"%H:%M:%S")),Extract[,3:9])
-timeline<-1:2880
+
 png(file="Plot2.png")
 timeline<-1:2880
 plot(timeline,as.numeric(Extracted$Global_active_power),
